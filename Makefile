@@ -11,3 +11,6 @@ LFLAGS1 = -fno-range-check
 
 .f90.o:
 	$(FC) $(CFLAGS1) $*.f90
+
+clean:
+	rm -f *.o *.mod 2x2x2
