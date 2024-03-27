@@ -6,6 +6,7 @@ It enumerates all 3,674,160 configurations of 2x2x2 Rubik's Cube by performing a
 
 ## how to compile
 cd rubik2x2x2
+
 make
 
 ## how to run
@@ -39,6 +40,7 @@ It enumerates unique configurations of 3x3x3 Rubik's Cube by performing all poss
 
 ## how to compile
 cd rubik3x3x3
+
 make
 
 ## how to run
