@@ -58,6 +58,7 @@ It enumerates unique configurations of 4x4x4 Rubik's Cube by performing all poss
 
 ## how to compile
 cd rubik4x4x4
+
 make
 
 ## how to run
