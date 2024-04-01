@@ -70,3 +70,21 @@ R1, R2, R3, D1, D2, D3, B1, B2, B3, R1<sup>-1</sup>, R2<sup>-1</sup>, R3<sup>-1<
 ### quarter-turn metric (God's number is unknown)
 R1, R2, R3, D1, D2, D3, B1, B2, B3, R1<sup>-1</sup>, R2<sup>-1</sup>, R3<sup>-1</sup>, D1<sup>-1</sup>, D2<sup>-1</sup>, D3<sup>-1</sup>, B1<sup>-1</sup>, B2<sup>-1</sup>, B3<sup>-1</sup>.
 
+# 5x5x5 Rubik's Cube
+
+It enumerates unique configurations of 5x5x5 Rubik's Cube by performing all possible turns in each step, starting from the completely solved configuration. The numbers of unique configurations in the first few steps can be used to determine the branching ratio.
+
+## how to compile
+cd rubik5x5x5
+
+make
+
+## how to run
+5x5x5
+
+### half-turn metric (God's number is unknown)
+R1, R2, D1, D2, B1, B2, L1, L2, U1, U2, F1, F2, R1<sup>-1</sup>, R2<sup>-1</sup>, D1<sup>-1</sup>, D2<sup>-1</sup>, B1<sup>-1</sup>, B2<sup>-1</sup>, L1<sup>-1</sup>, L2<sup>-1</sup>, U1<sup>-1</sup>, U2<sup>-1</sup>, F1<sup>-1</sup>, F2<sup>-1</sup>, R1<sup>2</sup>, R2<sup>2</sup>, D1<sup>2</sup>, D2<sup>2</sup>, B1<sup>2</sup>, B2<sup>2</sup>, L1<sup>2</sup>, L2<sup>2</sup>, U1<sup>2</sup>, U2<sup>2</sup>, F1<sup>2</sup>, F2<sup>2</sup>.
+
+### quarter-turn metric (God's number is unknown)
+R1, R2, D1, D2, B1, B2, L1, L2, U1, U2, F1, F2, R1<sup>-1</sup>, R2<sup>-1</sup>, D1<sup>-1</sup>, D2<sup>-1</sup>, B1<sup>-1</sup>, B2<sup>-1</sup>, L1<sup>-1</sup>, L2<sup>-1</sup>, U1<sup>-1</sup>, U2<sup>-1</sup>, F1<sup>-1</sup>, F2<sup>-1</sup>.
+
