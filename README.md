@@ -1,5 +1,7 @@
 # rubik
 
+See S. Hirata, “Probabilistic estimates of the diameters of the Rubik's Cube groups,” (14 pages), arXiv:2404.07337 (2024), https://arxiv.org/abs/2404.07337 .
+
 # 2x2x2 Rubik's Cube
 
 It enumerates all 3,674,160 configurations of 2x2x2 Rubik's Cube by performing all possible turns in each step, thereby determining its God's number (the minimal number of turns to solve the Cube in any initial configuration; the diameter of the Cayley graph of the Rubik's Cube group) in various metrics. It also reports the frequency of the appearances of duplicate configurations and the numbers of the turns used to reach all configurations.
