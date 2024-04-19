@@ -48,10 +48,10 @@ make
 ## how to run
 3x3x3
 
-### half-turn metric (God's number is 20 according to Rikicki <i>et al.</i>, SIAM J. Discrete Math. <b>27</b>, 1082-1105 (2013))
+### half-turn metric (God's number is 20 according to Rokicki <i>et al.</i>, SIAM J. Discrete Math. <b>27</b>, 1082-1105 (2013))
 R, D, B, L, U, F, R<sup>-1</sup>, D<sup>-1</sup>, B<sup>-1</sup>, L<sup>-1</sup>, U<sup>-1</sup>, F<sup>-1</sup>, R<sup>2</sup>, D<sup>2</sup>, B<sup>2</sup>, L<sup>2</sup>, U<sup>2</sup>, F<sup>2</sup> in the Singmaster notation.
 
-### quarter-turn metric (God's number is 26 according to Rikicki <i>et al.</i>, SIAM J. Discrete Math. <b>27</b>, 1082-1105 (2013))
+### quarter-turn metric (God's number is 26 according to Rokicki <i>et al.</i>, SIAM J. Discrete Math. <b>27</b>, 1082-1105 (2013))
 R, D, B, L, U, F, R<sup>-1</sup>, D<sup>-1</sup>, B<sup>-1</sup>, L<sup>-1</sup>, U<sup>-1</sup>, F<sup>-1</sup> in the Singmaster notation.
 
 # 4x4x4 Rubik's Cube
