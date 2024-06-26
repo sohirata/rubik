@@ -54,6 +54,12 @@ R, D, B, L, U, F, R<sup>-1</sup>, D<sup>-1</sup>, B<sup>-1</sup>, L<sup>-1</sup>
 ### quarter-turn metric (God's number is 26 according to Rokicki <i>et al.</i>, SIAM J. Discrete Math. <b>27</b>, 1082-1105 (2013))
 R, D, B, L, U, F, R<sup>-1</sup>, D<sup>-1</sup>, B<sup>-1</sup>, L<sup>-1</sup>, U<sup>-1</sup>, F<sup>-1</sup> in the Singmaster notation.
 
+### square-slice metric 
+R<sup>2</sup>L<sup>-2</sup>, D<sup>2</sup>U<sup>-2</sup>, B<sup>2</sup>F<sup>-2</sup> in the Singmaster notation.
+
+### square metric (the size of the group is 2<sup>13</sup>3<sup>4</sup> = 663,552 according to Joyner, page 234)
+R<sup>2</sup>, L<sup>2</sup>, D<sup>2</sup>, U<sup>2</sup>, B<sup>2</sup>, F<sup>2</sup> in the Singmaster notation.
+
 # 4x4x4 Rubik's Cube
 
 It enumerates unique configurations of 4x4x4 Rubik's Cube by performing all possible turns in each step, starting from the completely solved configuration. The numbers of unique configurations in the first few steps can be used to determine the branching ratio.
