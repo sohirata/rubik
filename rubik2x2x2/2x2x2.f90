@@ -425,8 +425,10 @@ PROGRAM RUBIK_2X2X2
          ENDIF
          NEWLIST(INEW)=JCONFIG
          NEWTURN(INEW)=JROTATE
+         WRITE(6,*) 'SEED # ',I,' TURN # ',ITURN,' NEW # ',ILIST
         ELSE
          IFOUND(DIST(JFOUND))=IFOUND(DIST(JFOUND))+1
+         WRITE(6,*) 'SEED # ',I,' TURN # ',ITURN,' FOUND ',JFOUND 
         ENDIF
        ENDIF
       ENDDO
