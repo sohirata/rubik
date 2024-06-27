@@ -28,7 +28,7 @@ R, D, B in the Singmaster notation.
 ### bi-quarter-turn metric (God's number is 10)
 R, D, B, R<sup>-1</sup>, D<sup>-1</sup>, B<sup>-1</sup>, R<sup>2</sup>, D<sup>2</sup>, B<sup>2</sup>, RD, R<sup>-1</sup>D<sup>-1</sup>, DB, D<sup>-1</sup>B<sup>-1</sup>, BR, B<sup>-1</sup>R<sup>-1</sup> in the Singmaster notation.
 
-### square metric (the order of the subgroup is 24. God's number is 4)
+### square metric (the order of the subgroup is 24. God's number is 4. The Cayley graph is the Nauru graph)
 R<sup>2</sup>, D<sup>2</sup>, B<sup>2</sup> in the Singmaster notation.
 
 ## available algorithms
@@ -57,7 +57,7 @@ R, D, B, L, U, F, R<sup>-1</sup>, D<sup>-1</sup>, B<sup>-1</sup>, L<sup>-1</sup>
 ### quarter-turn metric (God's number is 26 according to Rokicki <i>et al.</i>, SIAM J. Discrete Math. <b>27</b>, 1082-1105 (2013))
 R, D, B, L, U, F, R<sup>-1</sup>, D<sup>-1</sup>, B<sup>-1</sup>, L<sup>-1</sup>, U<sup>-1</sup>, F<sup>-1</sup> in the Singmaster notation.
 
-### square-slice metric (the order of the subgroup is 8. God's number is 3. The Cayley graph is a cube.)
+### square-slice metric (the order of the subgroup is 8. God's number is 3. The Cayley graph is a cube)
 R<sup>2</sup>L<sup>-2</sup>, D<sup>2</sup>U<sup>-2</sup>, B<sup>2</sup>F<sup>-2</sup> in the Singmaster notation.
 
 ### square metric (the order of the subgroup is 2<sup>13</sup>3<sup>4</sup> = 663,552 according to Joyner, page 234. God's number is 15)
