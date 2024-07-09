@@ -2,6 +2,7 @@ MODULE RUBIK3
 
    INTEGER(4),PARAMETER :: N=1000000
    INTEGER(4) :: LIST(1:48,1:N),SUBLIST(1:48,1:N),NEWLIST(1:48,1:N)
+   INTEGER(4) :: NEWIDENTITY(1:N),SUBIDENTITY(1:N)
    INTEGER(4) :: ILIST,ISUB,INEW
 
 END MODULE
@@ -58,6 +59,7 @@ PROGRAM RUBIK_3X3X3
    LIST(:,1)=ICUBOID(:)
    ILIST=1
    SUBLIST(:,1)=ICUBOID(:)
+   SUBIDENTITY(1)=1
    ISUB=1
    INEW=0
    WRITE(6,'(3(A,I10))') 'STEP ',ISTEP,' NEW CONFIGS ',1,' CUMMULATIVE CONFIGS ',ILIST
@@ -66,6 +68,7 @@ PROGRAM RUBIK_3X3X3
     CALL CPU_TIME(START)
     CALL CPU_TIME(S2)
     NEWLIST=0
+    NEWIDENTITY=0
     INEW=0
     DO I=1,ISUB
      IF (ISUB > 100000) THEN
@@ -106,7 +109,11 @@ PROGRAM RUBIK_3X3X3
          STOP
         ENDIF
         NEWLIST(:,INEW)=JCUBOID(:)
-       ENDIF 
+        NEWIDENTITY(INEW)=ILIST
+if (istep <= 3) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',ILIST,','
+       ELSE
+if (istep <= 3) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',JFOUND,','
+       ENDIF
       ENDDO
 !    HALF-TURN METRIC
      ELSE IF (METRIC==2) THEN
@@ -162,6 +169,10 @@ PROGRAM RUBIK_3X3X3
          STOP
         ENDIF
         NEWLIST(:,INEW)=JCUBOID(:)
+        NEWIDENTITY(INEW)=ILIST
+if (istep <= 3) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',ILIST,','
+       ELSE
+if (istep <= 3) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',JFOUND,','
        ENDIF 
       ENDDO
 !    SQUARE-SLICE SUBGROUP
@@ -200,6 +211,10 @@ PROGRAM RUBIK_3X3X3
          STOP
         ENDIF
         NEWLIST(:,INEW)=JCUBOID(:)
+        NEWIDENTITY(INEW)=ILIST
+if (istep <= 3) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',ILIST,','
+       ELSE
+if (istep <= 3) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',JFOUND,','
        ENDIF 
       ENDDO
 !    SQUARE SUBGROUP
@@ -244,6 +259,10 @@ PROGRAM RUBIK_3X3X3
          STOP
         ENDIF
         NEWLIST(:,INEW)=JCUBOID(:)
+        NEWIDENTITY(INEW)=ILIST
+!if (istep <= 3) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',ILIST,','
+       ELSE
+!if (istep <= 3) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',JFOUND,','
        ENDIF 
       ENDDO
      ENDIF
@@ -260,6 +279,7 @@ PROGRAM RUBIK_3X3X3
     WRITE(6,'(3(A,I10),A,F20.3)') 'STEP ',ISTEP,' NEW CONFIGS ',INEW,' CUMMULATIVE CONFIGS ',ILIST,' CPU TIME ',FINISH-START
     ISUB=INEW
     SUBLIST=NEWLIST
+    SUBIDENTITY=NEWIDENTITY
    ENDDO
    CALL CPU_TIME(FINISH)
 

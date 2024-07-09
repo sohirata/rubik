@@ -3,6 +3,7 @@ MODULE RUBIK
    INTEGER(4),PARAMETER :: N=7*6*5*4*3*2*1*(3**6)
    INTEGER(16) :: LIST(1:N),SUBLIST(1:N),NEWLIST(1:N)
    INTEGER(16) :: TURN(1:N),SUBTURN(1:N),NEWTURN(1:N)
+   INTEGER(4)  :: NEWIDENTITY(1:N),SUBIDENTITY(1:N)
    INTEGER(4)  :: DIST(1:N)
    INTEGER(4)  :: ILIST,ISUB,INEW
    INTEGER(4)  :: NTURN
@@ -112,6 +113,7 @@ PROGRAM RUBIK_2X2X2
    ILIST=1
    SUBLIST(1)=ICONFIG
    SUBTURN(1)=IROTATE
+   SUBIDENTITY(1)=1
    ISUB=1
    INEW=0
    WRITE(6,'(3(A,I10))') 'STEP ',ISTEP,' NEW CONFIGS ',1,' CUMMULATIVE CONFIGS ',ILIST
@@ -121,6 +123,7 @@ PROGRAM RUBIK_2X2X2
     CALL CPU_TIME(S2)
     NEWLIST=0
     NEWTURN=0
+    NEWIDENTITY=0
     INEW=0
     IFOUND=0
     DO I=1,ISUB
@@ -178,8 +181,11 @@ PROGRAM RUBIK_2X2X2
          ENDIF
          NEWLIST(INEW)=JCONFIG
          NEWTURN(INEW)=JROTATE
+         NEWIDENTITY(INEW)=ILIST
+if (istep <= 4) write(*,'(I3,A,I3,A)') SUBIDENTITY(I),'<->',ILIST,','
         ELSE
          IFOUND(DIST(JFOUND))=IFOUND(DIST(JFOUND))+1
+if (istep <= 4) write(*,'(I3,A,I3,A)') SUBIDENTITY(I),'<->',JFOUND,','
         ENDIF 
        ENDIF 
       ENDDO
@@ -239,8 +245,11 @@ PROGRAM RUBIK_2X2X2
          ENDIF
          NEWLIST(INEW)=JCONFIG
          NEWTURN(INEW)=JROTATE
+         NEWIDENTITY(INEW)=ILIST
+if (istep <= 4) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',ILIST,','
         ELSE
          IFOUND(DIST(JFOUND))=IFOUND(DIST(JFOUND))+1
+if (istep <= 4) write(*,'(I4,A,I4,A)') SUBIDENTITY(I),'<->',JFOUND,','
         ENDIF 
        ENDIF
       ENDDO
@@ -285,8 +294,11 @@ PROGRAM RUBIK_2X2X2
          ENDIF
          NEWLIST(INEW)=JCONFIG
          NEWTURN(INEW)=JROTATE
+         NEWIDENTITY(INEW)=ILIST
+if (istep <= 4) write(*,'(I3,A,I3,A)') SUBIDENTITY(I),'<->',ILIST,','
         ELSE
          IFOUND(DIST(JFOUND))=IFOUND(DIST(JFOUND))+1
+if (istep <= 4) write(*,'(I3,A,I3,A)') SUBIDENTITY(I),'<->',JFOUND,','
         ENDIF 
        ENDIF
       ENDDO
@@ -425,10 +437,13 @@ PROGRAM RUBIK_2X2X2
          ENDIF
          NEWLIST(INEW)=JCONFIG
          NEWTURN(INEW)=JROTATE
-         WRITE(6,*) 'SEED # ',I,' TURN # ',ITURN,' NEW # ',ILIST
+!        WRITE(6,*) 'SEED # ',I,' TURN # ',ITURN,' NEW # ',ILIST
+         NEWIDENTITY(INEW)=ILIST
+if (istep <= 4) write(*,'(I3,A,I3,A)') SUBIDENTITY(I),'<->',ILIST,','
         ELSE
          IFOUND(DIST(JFOUND))=IFOUND(DIST(JFOUND))+1
-         WRITE(6,*) 'SEED # ',I,' TURN # ',ITURN,' FOUND ',JFOUND 
+!        WRITE(6,*) 'SEED # ',I,' TURN # ',ITURN,' FOUND ',JFOUND 
+if (istep <= 4) write(*,'(I3,A,I3,A)') SUBIDENTITY(I),'<->',JFOUND,','
         ENDIF
        ENDIF
       ENDDO
@@ -457,6 +472,7 @@ PROGRAM RUBIK_2X2X2
     ISUB=INEW
     SUBLIST=NEWLIST
     SUBTURN=NEWTURN
+    SUBIDENTITY=NEWIDENTITY
    ENDDO
    CALL CPU_TIME(FINISH)
 
