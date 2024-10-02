@@ -1,6 +1,7 @@
 # rubik
 
-See S. Hirata, “Probabilistic estimates of the diameters of the Rubik's Cube groups,” (14 pages), arXiv:2404.07337 (2024), https://arxiv.org/abs/2404.07337 .
+S. Hirata, “Probabilistic estimates of the diameters of the Rubik's Cube groups,” (15 pages), arXiv:2404.07337 (2024), https://arxiv.org/abs/2404.07337 .
+S. Hirata, “Graph-theoretical estimates of the diameters of the Rubik's Cube groups,” (6 pages), arXiv:2407.12961 (2024), https://arxiv.org/abs/2407.12961 .
 
 # 2x2x2 Rubik's Cube
 
